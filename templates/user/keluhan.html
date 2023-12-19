@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman keluhan</title>
+
+    <!-- Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='user/keluhan.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Halaman keluhan</h1>
+      <form action="/keluhan/save" method="POST" class="form">
+        <div class="input-box">
+          <label for="fullname">Nama Lengkap</label>
+          <input
+            type="text"
+            name="fullname_give"
+            id="fullname"
+            placeholder="Masukkan nama lengkap anda..."
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <label for="age">Umur</label>
+          <input
+            type="text"
+            name="age_give"
+            id="age"
+            placeholder="Masukkan umur anda..."
+            required
+          />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label for="phone">Nomor Handphone</label>
+            <input
+              type="text"
+              name="phone_give"
+              id="phone"
+              placeholder="Masukkan nomor handphone anda..."
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="date">Tanggal</label>
+            <input type="Date" name="date_give" id="date" required />
+          </div>
+        </div>
+
+        <div class="gender-box">
+          <h3 for="radio">Jenis Kelamin</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input
+                type="radio"
+                name="radio_give"
+                id="check-pria"
+                value="Pria"
+              />
+              <label for="check-pria">Pria</label>
+            </div>
+            <div class="gender">
+              <input
+                type="radio"
+                name="radio_give"
+                id="check-wanita"
+                value="Wanita"
+              />
+              <label for="check-wanita">Wanita</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label for="address">Alamat</label>
+          <input
+            type="text"
+            name="address_give"
+            id="address"
+            placeholder="Masukkan alamat anda..."
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <label for="keluhan">Keluhan Pasien</label>
+          <input
+            type="text"
+            name="keluhan_give"
+            id="keluhan"
+            placeholder="Masukan keluhan anda..."
+            required
+          />
+        </div>
+
+        <button type="submit" id="submit" onclick="keluh_save()">Simpan</button>
+        <button type="button" id="exit">Keluar</button>
+      </form>
+    </section>
+    <script src="{{ url_for('static', filename='user/keluhan.js') }}"></script>
+  </body>
+</html>

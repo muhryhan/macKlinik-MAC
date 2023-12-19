@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- iconss -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- My CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='admin/admin.css') }}"
+    />
+
+    <title>Admin</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="/adm_dashboard" class="brand">
+        <i class="plus-medical"></i>
+        <span class="text">Klinikadmin</span>
+      </a>
+
+      <ul class="side-menu top">
+        <li>
+          <a href="/adm_dashboard">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adm_obat">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">Data pembelian obat</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adm_keluhan">
+            <i class="bx bxs-group"></i>
+            <span class="text">Data keluhan pasien</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/adm_artikel">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Artikel</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adm_hist_regis">
+            <i class="bx bxs-group"></i>
+            <span class="text">Register</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="/login_admin" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link">Categories</a>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button type="submit" class="search-btn">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <input type="checkbox" id="switch-mode" hidden />
+        <label for="switch-mode" class="switch-mode"></label>
+
+        <a href="#" class="profile">
+          <img src="o.jpg" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>ARTIKEL</h1>
+          </div>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Artikel</h3>
+              <i class="bx bx-search"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="hutao.png" />
+                    <p>ian</p>
+                  </td>
+                  <td>07-12-2023</td>
+
+                  <td>
+                    <span class="status update" onclick="openUpdateModal()"
+                      >Update</span
+                    >
+                  </td>
+                  <td><span class="status delete">Delete</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="hutao.png" />
+                    <p>aulia</p>
+                  </td>
+                  <td>07-12-2023</td>
+
+                  <td>
+                    <span class="status update" onclick="openUpdateModal()"
+                      >Update</span
+                    >
+                  </td>
+                  <td><span class="status delete">Delete</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="hutao.png" />
+                    <p>dzaki</p>
+                  </td>
+                  <td>07-12-2023</td>
+
+                  <td>
+                    <span class="status update" onclick="openUpdateModal()"
+                      >Update</span
+                    >
+                  </td>
+                  <td><span class="status delete">Delete</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- modal -->
+    <div class="updateModal" id="editModal">
+      <div class="update-modal" id="editkeluhan">
+        <div class="artikel modal-content">
+          <span
+            class="close-btn"
+            onclick="document.querySelector('#editModal').style.display = 'none';"
+            >&times;</span
+          >
+          <h2>Update Artikel</h2>
+          <form action="">
+            <input
+              type="text"
+              name="judul-artikel"
+              id="newUserName"
+              placeholder="Judul"
+            />
+            <input type="file" name="gambar" id="newUserImg" accept="image/*" />
+            <textarea
+              name="isi-artikel"
+              id="newUserDescription"
+              placeholder="Deskripsi"
+            ></textarea>
+
+            <div class="btn-group">
+              <button type="submit" name="submit">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+
+    <script src="{{ url_for('static', filename='admin/admin.js') }}"></script>
+  </body>
+</html>

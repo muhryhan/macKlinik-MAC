@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://unsplash.com/photos/IM8ZyYaSW6g/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzAyMzAyMDkwfA&force=true&w=1920");
+  background-size: cover;
+  background-position: center center;
+}
+.container {
+  background-color: #fff;
+  width: 95%;
+  max-width: 1024px;
+  min-height: 660px;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.container > div {
+  width: 50%;
+}
+.form {
+  padding: 70px 50px;
+  background-color: #f0f0f0;
+}
+.form .title {
+  color: #74b9ff;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.form form {
+  margin-top: 20px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.field label,
+.lainnya {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.lainnya a {
+  color: #000;
+}
+.field input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+#submit {
+  display: block;
+  width: 100%;
+  background-color: #0984e3;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.gambar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gambar span {
+  font-size: 200px;
+  background: -webkit-linear-gradient(-45deg, #55efc4, #0984e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Social Media Styles */
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  border: 1px solid #444;
+  border-radius: 50px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #74b9ff;
+  border: #0984e3;
+}
+
+@media screen and (max-width: 700px) {
+  .gambar {
+    display: none;
+  }
+  .container {
+    width: 90%;
+    max-width: 500px;
+    display: block;
+    min-height: auto;
+  }
+  .form {
+    width: 100% !important;
+  }
+  .social-icon {
+    margin: 0 5px;
+  }
+  .social-media {
+    margin-bottom: 10px;
+  }
+}

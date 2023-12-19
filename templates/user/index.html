@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='user/index.css') }}"
+    />
+    <script>
+      $(document).ready(function () {
+  // Panggil fungsi untuk menampilkan artikel saat halaman dimuat
+  cardArtikel();
+});
+    </script>
+  </head>
+  <body>
+    <!-- Navbar sebelum login -->
+    <nav class="navbar" id="navbar-before-login">
+      <a href="#" class="navbar-logo">
+        <span class="logo material-symbols-outlined"> stethoscope </span>
+        <span class="judul-icon">MacKlinik</span>
+      </a>
+
+      <div id="tamu" class="navbar-nav">
+        <a href="/">Home</a>
+        <a href="/obat">Daftar obat</a>
+        <a href="/keluhan">Keluhan</a>
+        <a href="/artikel">Artikel</a>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="">History</option>
+          <option value="/hist_pembelian">Pembelian</option>
+          <option value="/hist_keluhan">Keluhan</option>
+        </select>   
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="#">Profile</option>
+          <option value="#">User</option>
+          <option value="/login_user">LogOut</option>
+        </select>
+
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </nav>
+
+    <!-- Navbar sesudah login -->
+    <!-- <nav class="navbar" id="navbar-after-login">
+      <a href="#" class="navbar-logo">
+        <span class="logo material-symbols-outlined"> stethoscope </span>
+        <span class="judul-icon">MacKlinik</span>
+      </a>
+
+      <div id="user" class="navbar-nav">
+        <a href="#">Home</a>
+        <a href="/obat">Daftar obat</a>
+        <a href="/keluhan">Keluhan</a>
+        <a href="/artikel">Artikel</a>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="">History</option>
+          <option value="/hist_pembelian">Pembelian</option>
+          <option value="/hist_keluhan">Keluhan</option>
+        </select>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="#">User</option>
+          <option value="/login_user">LogOut</option>
+        </select>
+      </div>
+
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </nav> -->
+
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <div class="content-wrap">
+          <h1>Klinik<span>Sehat</span></h1>
+          <p>Siap membantu kamu membangun kehidupan yang sehat!</p>
+          <a href="/" class="cta">Cari obat</a>
+        </div>
+      </main>
+    </section>
+
+    <!-- Hero Section end -->
+
+    <!-- About section star -->
+    <section id="about" class="about">
+      <h2 class="judul"><span>Artikel</span></h2>
+      <div id="card-artikel" class="content">
+        <!-- <div class="card">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/40/5a/c4/405ac483403e7b1a7a3b3cb46a22c3e7.jpg"
+              alt=""
+            />
+          </div>
+          <h2 class="title">Title</h2>
+          <p class="description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            nobis voluptates, totam incidunt quibusdam voluptatem quo illum
+            deleniti suscipit, assumenda exercitationem, tenetur ducimus fugit
+            aut! Vero, consectetur? Neque, tempore dolorum?
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div> -->
+      </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- footer secstion star -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+      
+      <div class="credit">
+        <p>Created by <a href="">kelompok Mac</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="{{ url_for('static', filename='user/index.js') }}"></script>
+  </body>
+</html>

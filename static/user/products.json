@@ -1,0 +1,153 @@
+[
+  {
+    "filter_id": 1,
+    "filter_name": "All categories",
+    "products": [
+      {
+        "id": 11,
+        "name": "Paracetamol",
+        "detail": "Meredakan rasa nyeri dan menurunkan demam. ",
+        "price": "Rp.20.000,00",
+        "imgSrc": "https://res-5.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1687398359_paracet_fm"
+      },
+
+      {
+        "id": 12,
+        "name": "Antasida",
+        "detail": "Obat sakit maag untuk mengurangi nyeri lambung yang disebabkan oleh kelebihan asam lambung, gastritis, ulkus gastritis dan ulkus duodenal dengan gejala seperti mual dan perih.",
+        "price": "Rp.3.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20220119090428359225_ANTASIDA--DOEN-RAMA-TAB-100S-removebg-preview.png"
+      },
+
+      {
+        "id": 13,
+        "name": "Tablet Tambah Darah",
+        "detail": "Membantu memenuhi kebutuhan zat besi dan asam folat tubuh, serta mengatasi anemia megaloblastik.",
+        "price": "Rp.7.000,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20210503011438359225_TABLET-TAMBAH-DARAH-NEO-KF-TAB-100S.jpg"
+      },
+
+      {
+        "id": 14,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 15,
+        "name": "Panadol Syrup",
+        "detail": "",
+        "price": "Rp.62.000,00",
+        "imgSrc": "images/noir.png"
+      },
+
+      {
+        "id": 16,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 17,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 18,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      }
+    ]
+  },
+
+  {
+    "filter_id": 2,
+    "filter_name": "Obat Bebas",
+    "products": [
+      {
+        "id": 19,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 20,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      }
+    ]
+  },
+
+  {
+    "filter_id": 3,
+    "filter_name": "Obat Bebas Terbatas",
+    "products": [
+      {
+        "id": 21,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      }
+    ]
+  },
+
+  {
+    "filter_id": 4,
+    "filter_name": "Obat Keras",
+    "products": [
+      {
+        "id": 22,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 23,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      }
+    ]
+  },
+
+  {
+    "filter_id": 5,
+    "filter_name": "Obat Psikotropika dan Narkoba",
+    "products": [
+      {
+        "id": 24,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      },
+
+      {
+        "id": 25,
+        "name": "Bodrex",
+        "detail": "Meringankan sakit kepala, sakit gigi dan menurunkan demam",
+        "price": "Rp.12.500,00",
+        "imgSrc": "https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg"
+      }
+    ]
+  }
+
+
+]

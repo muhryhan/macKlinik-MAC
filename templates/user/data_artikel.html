@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <title>Artikel Sehat</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='user/artikel.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <span class="logo material-symbols-outlined"> stethoscope </span>
+        <span class="judul-icon">MacKlinik</span>
+      </a>
+
+      <div id="user" class="navbar-nav">
+        <a href="#">Home</a>
+        <a href="/obat">Daftar obat</a>
+        <a href="/keluhan">Keluhan</a>
+        <a href="/artikel">Artikel</a>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="/hist_pembelian">Pembelian</option>
+          <option value="/hist_keluhan">Keluhan</option>
+        </select>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="#">User</option>
+          <option value="/login_user">LogOut</option>
+        </select>
+      </div>
+
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </nav>
+
+    <!-- Navbar end -->
+
+    <section class="read container" id="read">
+      <!-- Loop untuk menampilkan setiap artikel -->
+      {% for article in articles.articles %}
+      <article>
+        <a href="{{ article.link }}?id={{ article.id }}" class="article-link">
+          <!-- Konten Link -->
+          <div class="post-box" data-id="{{ article.id }}">
+            <!-- Konten artikel seperti gambar, judul, dan deskripsi -->
+            <img src="{{ article.image }}" alt="" class="post-img" />
+            <a href="{{ article.link }}?id={{ article.id }}" class="post-title">
+              {{ article.title }}
+            </a>
+            <p class="post-description">{{ article.description }}</p>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="{{ url_for('static', filename='user/data_artikel.js') }}"></script>
+  </body>
+</html>

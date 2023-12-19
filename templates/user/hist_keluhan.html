@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='user/hist_keluhan.css') }}"
+    />
+
+    <!-- Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- jquery &cookie -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        console.log("Document is ready");
+        list_keluhan();
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- Navbar start -->
+    <nav class="navbar" id="navbar-before-login">
+      <a href="#" class="navbar-logo">
+        <span class="logo material-symbols-outlined"> stethoscope </span>
+        <span class="judul-icon">MacKlinik</span>
+      </a>
+
+      <div id="tamu" class="navbar-nav">
+        <a href="/">Home</a>
+        <a href="/obat">Daftar obat</a>
+        <a href="/keluhan">Keluhan</a>
+        <a href="/artikel">Artikel</a>
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="">History</option>
+          <option value="/hist_pembelian">Pembelian</option>
+          <option value="/hist_keluhan">Keluhan</option>
+        </select>   
+        <select id="" class="dropdown" onchange="location = this.value;">
+          <option value="#">Profile</option>
+          <option value="#">User</option>
+          <option value="/login_user">LogOut</option>
+        </select>
+
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="container">
+      <h1>History Keluhan</h1>
+      <div class="list-beli" id="list-keluhan">
+        <!-- <div class="beli">
+          <div class="data-beli">
+            <h3>keluhan #1</h3>
+            <p>nama pasien</p>
+            <p>12/12/2223</p>
+          </div>
+          <button onclick="show_hist_keluhan()">Lihat</button>
+        </div> -->
+      </div>
+    </div>
+    <!-- modal beli -->
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Pembelian</h2>
+        <div class="tgl">
+          <h3>Nama pasien</h3>
+          <p>reza</p>
+        </div>
+
+        <div class="tgl">
+          <h3>umur</h3>
+          <p>23</p>
+        </div>
+
+        <div class="tgl">
+          <h3>Tanggal keluhan</h3>
+          <p>12/12/2023</p>
+        </div>
+
+        <div class="tgl">
+          <h3>Gender</h3>
+          <p>Laki-laki</p>
+        </div>
+
+        <div class="tgl">
+          <h3>Alamat</h3>
+          <p>sepatan</p>
+        </div>
+
+        <div class="tgl">
+          <h3>keluhan pasien</h3>
+          <p>mic selalu ga active</p>
+        </div>
+
+        <div class="status">
+          <h3>tindakan</h3>
+          <p>minum obat</p>
+        </div>
+        
+        <div class="tgl">
+          <h3>saran obat</h3>
+          <p>bocrex</p>
+        </div>
+
+       
+        <div class="status">
+          <h3>Status</h3>
+          <p>pterkirim</p>
+        </div>
+      </div>
+
+        <script src="{{ url_for('static', filename='user/hist_keluhan.js') }}"></script>
+  </body>
+</html>
